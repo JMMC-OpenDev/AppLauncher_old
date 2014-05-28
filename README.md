@@ -1,7 +1,7 @@
 AppLauncher
 ===========
 
-Tool to ease astronomers work flow:
+Java tool to ease astronomers work flow:
 - ensure VO interoperability by managing the SAMP hub;
 - discover and automatically start VO applications when needed.
 
