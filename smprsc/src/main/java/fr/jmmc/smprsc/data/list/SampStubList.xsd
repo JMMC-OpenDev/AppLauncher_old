@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+*            AppLauncher project ( http://www.jmmc.fr/applauncher )
+********************************************************************************
+* Copyright (c) 2014, CNRS. All rights reserved.
+*
+* This file is part of AppLauncher.
+*
+* AppLauncher is free software: you can redistribute it and/or modify it under
+* the terms of the GNU General Public License as published by the
+* Free Software Foundation, version 3.
+*
+* AppLauncher is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+* or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+* more details.
+*
+* You should have received a copy of the GNU General Public License along with
+* AppLauncher. If not, see <http://www.gnu.org/licenses/>.
+********************************************************************************
+-->
+
+
+
+<!--
+Document   : SampStubList.xsd
+Author     : Sylvain LAFRASSE
+Description: Store JMMC AppLauncher Stub list.
+-->
+
+<!--
+            xmlns="http://www.jmmc.fr/jmcs/app/1.0"
+            targetNamespace="http://www.jmmc.fr/jmcs/app/1.0"
+-->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+            xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+            jaxb:version="2.1" jaxb:extensionBindingPrefixes="xjc">
+
+    <xsd:annotation>           
+        <xsd:documentation>
+            JMMC AppLauncher Stub list.
+        </xsd:documentation>
+        <xsd:appinfo>
+
+            <!-- Comment the jaxb:globalBindings element in embedded xml schema used with XJC -->
+            <jaxb:globalBindings generateIsSetMethod="true">
+                <xjc:simple />
+            </jaxb:globalBindings>
+
+            <jaxb:schemaBindings>
+                <jaxb:package name="fr.jmmc.smprsc.data.list.model"/>
+            </jaxb:schemaBindings>
+
+        </xsd:appinfo>
+    </xsd:annotation>
+
+
+    <!-- Elements -->
+
+    <xsd:element name="SampStubList" type="SampStubList">
+        <xsd:annotation>
+            <xsd:documentation>
+                JMMC AppLauncher Stub list.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+
+    <!-- Class Types -->
+
+    <xsd:complexType name="SampStubList">
+        <xsd:annotation>
+            <xsd:documentation>
+                JMMC AppLauncher Stub list.
+            </xsd:documentation>
+        </xsd:annotation>
+            
+        <xsd:sequence>
+
+            <!-- Element Family -->
+            <xsd:element name="family" type="Family" minOccurs="1" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        SAMP Application Family
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+        </xsd:sequence>
+
+    </xsd:complexType>
+
+    <!-- Define application families -->
+    <xsd:simpleType name="Category">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Interferometry"/>
+            <xsd:enumeration value="Essentials"/>
+            <xsd:enumeration value="WebApps"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- Store SAMP application family -->
+    <xsd:complexType name="Family">
+        <xsd:sequence>
+            <xsd:element name="application" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="category" type="Category" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>

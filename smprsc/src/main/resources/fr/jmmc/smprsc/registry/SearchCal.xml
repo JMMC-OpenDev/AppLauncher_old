@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="SearchCal">
+    <metadata>
+        <key>samp.name</key>
+        <value>SearchCal</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Find Interferometric Calibrators for Optical Observations</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.name</key>
+        <value>JMMC (Jean-Marie Mariotti Center)</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.url</key>
+        <value>http://www.jmmc.fr/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.authors</key>
+        <value>Brought to you by FIZEAU and IPAG laboratories, and the JMMC Technical Group</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.faq.url</key>
+        <value>http://www.jmmc.fr/SearchCal/faq</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.homepage.url</key>
+        <value>http://www.jmmc.fr/SearchCal</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://apps.jmmc.fr/~sclws/SearchCal/SearchCal.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.beta.url</key>
+        <value>http://apps.jmmc.fr/~betaswmgr/SearchCal/SearchCal.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.date</key>
+        <value>28/02/2014</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.version</key>
+        <value>4.4.3</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.releasenotes.url</key>
+        <value>http://www.jmmc.fr/searchcal/releasenotes.htm</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.rss.url</key>
+        <value>http://www.jmmc.fr/searchcal/searchcal.rss</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>fr.jmmc.searchcal.start.query</subscription>
+</SampStub>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="VOSED" type="WEB">
+    <metadata>
+        <key>samp.name</key>
+        <value>VOSED</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>VOSED is a tool developed in the framework of the Spanish VO to ease the generation of Spectral Energy Distributions (SEDs)</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.webapp.url</key>
+        <value>http://sdc.cab.inta-csic.es/vosed/index.jsp</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://sdc.cab.inta-csic.es/vosed/docs/UserGuide.pdf</value>
+    </metadata>
+    <metadata>
+        <key>author.affiliation</key>
+        <value>CAB - Centro de Astrobiología</value>
+    </metadata>
+    <metadata>
+        <key>home.page</key>
+        <value>http://sdc.laeff.inta.es/vosed/index.jsp</value>
+    </metadata>
+    <metadata>
+        <key>email</key>
+        <value>vosed-support@cab.inta-csic.es</value>
+    </metadata>
+</SampStub>

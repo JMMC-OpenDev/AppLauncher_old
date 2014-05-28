@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="seleste">
+    <metadata>
+        <key>samp.name</key>
+        <value>seleste</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.homepage.url</key>
+        <value>http://cda.cfa.harvard.edu/seleste/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://cda.cfa.harvard.edu/seleste/seleste/seleste.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>seleste is a VAO application for searching astronomical services which follow the TAP specifications</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://cda.cfa.harvard.edu/seleste/seleste/images/logo48.png</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.authors</key>
+        <value>Smithsonian Astrophysical Observatory</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>table.load.votable</subscription>
+</SampStub>

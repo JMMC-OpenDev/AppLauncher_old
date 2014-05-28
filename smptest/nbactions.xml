@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+*            AppLauncher project ( http://www.jmmc.fr/applauncher )
+********************************************************************************
+* Copyright (c) 2014, CNRS. All rights reserved.
+*
+* This file is part of AppLauncher.
+*
+* AppLauncher is free software: you can redistribute it and/or modify it under
+* the terms of the GNU General Public License as published by the
+* Free Software Foundation, version 3.
+*
+* AppLauncher is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+* or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+* more details.
+*
+* You should have received a copy of the GNU General Public License along with
+* AppLauncher. If not, see <http://www.gnu.org/licenses/>.
+********************************************************************************
+-->
+<actions>
+    <action>
+        <actionName>run</actionName>
+        <goals>
+            <goal>process-classes</goal>
+            <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+        </goals>
+        <properties>
+            <exec.args>-classpath %classpath fr.jmmc.smptest.AppLauncherTester</exec.args>
+            <exec.executable>java</exec.executable>
+        </properties>
+    </action>
+</actions>

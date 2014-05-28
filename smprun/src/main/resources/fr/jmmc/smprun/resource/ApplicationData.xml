@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+*            AppLauncher project ( http://www.jmmc.fr/applauncher )
+********************************************************************************
+* Copyright (c) 2014, CNRS. All rights reserved.
+*
+* This file is part of AppLauncher.
+*
+* AppLauncher is free software: you can redistribute it and/or modify it under
+* the terms of the GNU General Public License as published by the
+* Free Software Foundation, version 3.
+*
+* AppLauncher is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+* or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+* more details.
+*
+* You should have received a copy of the GNU General Public License along with
+* AppLauncher. If not, see <http://www.gnu.org/licenses/>.
+********************************************************************************
+-->
+<ApplicationData link="http://www.jmmc.fr/AppLauncher/" faqlink="http://www.jmmc.fr/AppLauncher/faq" rsslink="http://www.jmmc.fr/applauncher/applauncher.rss">
+
+    <company>
+        <short_name>JMMC</short_name>
+        <legal_name>Jean-Marie Mariotti Center</legal_name>
+        <logo_resource>fr/jmmc/jmcs/resource/image/jmmc_logo.png</logo_resource>
+        <homepage_url>http://www.jmmc.fr/</homepage_url>
+        <feedback_form_url>http://jmmc.fr/feedback/smprun.php</feedback_form_url>
+    </company>
+
+    <program name="AppLauncher" version="1.1.5"/>
+    <compilation date="15/5/2014" compiler="JDK 1.6.0_24"/>
+    <text>AppLauncher is the JMMC SAMP hub extension, that automatically start capable applications 'on demand' and provide a 'Dock' window with all JMMC applications and VO compliant tools.</text>
+    <authors>the JMMC Technical Group</authors>
+
+    <dependences>
+        <!-- VO interoperability -->
+        <package name="JSAMP"
+                 description="JSAMP is a Java toolkit for use with the Simple Applications Messaging Protocol. Made by Mark Taylor, working in the Astrophysics Group at Bristol University."
+                 link="http://software.astrogrid.org/doc/jsamp/"
+                 jars="jsamp-1.3.4+.jar"
+                 license="AFL v2.1"
+                 file="JSAMP.txt"/>
+        <!--license="(at least) the Academic Free License and the BSD License."/>-->
+    </dependences>
+
+    <menubar>
+        <menu label="Help">
+            <menu label="Registry Release Notes" classpath="fr.jmmc.jmcs.gui.action.ShowReleaseNotesAction" action="_launchRegistryReleaseNotes"/>
+            <menu label="Launch JNLP/SAMP Auto-Test" classpath="fr.jmmc.smprun.AppLauncher" action="_launchJnlpSampAutoTestAction"/>
+            <menu label="Configure Java WebStart" classpath="fr.jmmc.smprun.AppLauncher" action="_launchJavaWebStartViewerAction"/>
+        </menu>
+    </menubar>
+
+    <releasenotes>
+        <release version="1.1.5">
+            <prerelease version="1.1.5b2">
+                <change type="FEATURE">Added a broadcasted message filter (with its preference) to avoid multiple application startup simultaneously.</change>
+                <change type="CHANGE">Added a menu to view our Registry release notes.</change>
+            </prerelease>
+            <prerelease version="1.1.5b1">
+                <change type="CHANGE">Moved to Maven build system.</change>
+            </prerelease>
+        </release>
+        <release version="1.1.4">
+            <prerelease version="1.1.4b1">
+                <change type="FEATURE">Added SAO IRIS 2.0 application.</change>
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/51">Fixed redundant confirmation when AppLauncher's window is closed.</change>
+            </prerelease>
+        </release>
+        <release version="1.1.3">
+            <prerelease version="1.1.3b1">
+                <change type="CHANGE">Minor changes related to frame handling (title, size).</change>
+            </prerelease>
+        </release>
+        <release version="1.1.2" tag="AL_V1_1_2b1">
+            <pubDate>Mon, 29 Apr 2013 15:29:46 GMT</pubDate>
+            <prerelease version="1.1.2b1">
+                <change type="FEATURE">Added OIFitsExplorer application.</change>
+                <change type="CHANGE">Updated SearchCal beta URL.</change>
+                <change type="FEATURE">Added AMDA Web application.</change>
+                <change type="CHANGE">Updated RSS link to TRAC time line.</change>
+            </prerelease>
+        </release>
+        <release version="1.1.1">
+            <pubDate>Wed, 27 Feb 2013 11:48:31 GMT</pubDate>
+            <prerelease version="1.1.1b2" tag="AL_V1_1_1b2">
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/40">Now properly display missing documentation screen shots.</change>
+                <change type="CHANGE">Use a JPG icon instead of the PNG previous one to work around a known bug onto Mac OS X / Java 7.</change>
+            </prerelease>
+            <prerelease version="1.1.1b1" tag="AL_V1_1_1b1">
+                <change type="CHANGE">Removed irrelevant dock window resizability.</change>
+            </prerelease>
+        </release>
+        <release version="1.1">
+            <pubDate>Wed, 19 Sep 2012 14:46:30 GMT</pubDate>
+            <prerelease version="1.1b2" tag="AL_V1_1b2">
+                <change type="FEATURE">Added a preference to silently report unknown applications.</change>
+                <change type="BUGFIX">Now properly handle application names with spaces or accent.</change>
+                <change type="FEATURE">Added SAOImage DS9 essential application.</change>
+                <change type="FEATURE">Added VOSED Web application.</change>
+            </prerelease>
+            <prerelease version="1.1b1" tag="AL_V1_1b1">
+                <change type="FEATURE">Added support for command-line applications.</change>
+            </prerelease>
+        </release>
+        <release version="1.0.1">
+            <pubDate>Thu, 24 May 2012 21:35:26 GMT</pubDate>
+            <prerelease version="1.0.1b1" tag="AL_V1_0_1b1">
+                <change type="FEATURE">Added FAQ, RSS and release notes in 'Help' menu.</change>
+                <change type="FEATURE">Added VOPlot essential application.</change>
+            </prerelease>
+        </release>
+        <release version="1.0">
+            <pubDate>Fri, 11 May 2012 15:48:10 GMT</pubDate>
+            <prerelease version="1.0b16" tag="AL_V1_0b16">
+                <change type="CHANGE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/22">Updated LITpro and SearchCal XML descriptions.</change>
+            </prerelease>
+            <prerelease version="1.0b15" tag="AL_V1_0b15">
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/18">Added support for Web applications such as CDS Simbad or VizieR.</change>
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/19">Made URL clickable in application description view.</change>
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/20">Added application short description as tooltip in Dock window.</change>
+                <change type="FEATURE">Added application detailed description on 'info' button click in Dock window.</change>
+            </prerelease>
+            <prerelease version="1.0b14" tag="AL_V1_0b14">
+                <change type="FEATURE">Added an entry in Help menu to launch Java WebStart viewer.</change>
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/3">Added a 5 minutes timeout to kill and clean stuck applications in case something went wrong during launch.</change>
+            </prerelease>
+            <prerelease version="1.0b13" tag="AL_V1_0b13">
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/15">Added a welcome message on first launch.</change>
+            </prerelease>
+            <prerelease version="1.0b12" tag="AL_V1_0b12">
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/16">Added a preference to use beta version of applications in priority.</change>
+            </prerelease>
+            <prerelease version="1.0b11" tag="AL_V1_0b11">
+                <change type="FEATURE">Added a preference tab for general settings.</change>
+                <change type="FEATURE">Added a preference to hide the Dock window on startup.</change>
+                <change type="FEATURE">Added a preference to restrict SAMP support to selected applications on startup.</change>
+                <change type="FEATURE">Added a preference to skip SAMP hub quitting confirmation message.</change>
+            </prerelease>
+            <prerelease version="1.0b10" tag="AL_V1_0b10">
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/14">Added a preference window to select Dock applications.</change>
+            </prerelease>
+            <prerelease version="1.0b9" tag="AL_V1_0b9">
+                <change type="CHANGE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/11">Only wait before forwarding waiting messages for lazy-starting applications.</change>
+                <change type="CHANGE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/13">No more rely on network connection to load application icons.</change>
+            </prerelease>
+            <prerelease version="1.0b8" tag="AL_V1_0b8">
+                <change type="CHANGE">Embedded known application icons in case network is unavailable.</change>
+                <change type="FEATURE">Added SPLAT essential application.</change>
+            </prerelease>
+            <prerelease version="1.0b7" tag="AL_V1_0b7">
+                <change type="FEATURE">Added VOSpec essential application.</change>
+                <change type="BUGFIX">Fixed unknown application detection to listen to all public mTypes.</change>
+            </prerelease>
+            <prerelease version="1.0b6" tag="AL_V1_0b6">
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/7">Added a user manual.</change>
+            </prerelease>
+            <prerelease version="1.0b5" tag="AL_V1_0b5">
+                <change type="CHANGE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/4">Off-loaded stub description files to an external resource file for easier updates.</change>
+            </prerelease>
+            <prerelease version="1.0b4" tag="AL_V1_0b4">
+                <change type="CHANGE">Updated the reporting window to include contact email and JNLP URL input fields.</change>
+            </prerelease>
+            <prerelease version="1.0b3" tag="AL_V1_0b3">
+                <change type="FEATURE">Added an entry in the Help menu to manually test JNLP and SAMP abilities.</change>
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/9">Added automatic JNLP starting ability test.</change>
+            </prerelease>
+            <prerelease version="1.0b2" tag="AL_V1_0b2">
+                <change type="CHANGE">Restructured registry organization.</change>
+                <change type="BUGFIX" >Fixed non-detection of unknown real applications.</change>
+            </prerelease>
+            <prerelease version="1.0b1" tag="AL_V1_0b1">
+                <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/2">SAMP application meta-data reporting.</change>
+            </prerelease>
+            <prerelease version="1.0d4" tag="AL_V1_0d4">
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/5">Feedback reports now go to AppLauncher's dedicated Trac environment.</change>
+                <change type="CHANGE">SAMP hub sniffing.</change>
+            </prerelease>
+            <prerelease version="1.0d3" tag="AL_V1_0d3">
+                <change type="CHANGE">Central SAMP hub monitoring.</change>
+            </prerelease>
+            <prerelease version="1.0d2" tag="AL_V1_0d2">
+                <change type="CHANGE">Better process launching.</change>
+                <change type="CHANGE">Better EDT handling.</change>
+            </prerelease>
+            <prerelease version="1.0d1" tag="AL_V1_0d1">
+                <change type="FEATURE">First internal release.</change>
+            </prerelease>
+        </release>
+    </releasenotes>
+
+    <acknowledgment><![CDATA[This research has made use of the Jean-Marie Mariotti Center \texttt{AppLauncher} application \footnote{Available at http://www.jmmc.fr/applauncher}
+developped by IPAG, heavily based on \texttt{jSAMP} from Mark TAYLOR \footnote{Available at http://software.astrogrid.org/doc/p/jsamp/1.3-2/}.]]>
+    </acknowledgment>
+
+</ApplicationData>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="Aladin" lag="5000">
+    <metadata>
+        <key>samp.name</key>
+        <value>Aladin</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>The Aladin sky atlas and VO Portal</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://aladin.u-strasbg.fr/aladin_large.gif</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://aladin.u-strasbg.fr/java/aladin.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.beta.url</key>
+        <value>http://aladin.u-strasbg.fr/java/AladinBeta.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://aladin.u-strasbg.fr/java/FAQ.htx</value>
+    </metadata>
+    <metadata>
+        <key>aladin.version</key>
+        <value>v8.040</value>
+    </metadata>
+    <metadata>
+        <key>author.affiliation</key>
+        <value>CDS, Observatoire astronomique de Strasbourg</value>
+    </metadata>
+    <metadata>
+        <key>author.email</key>
+        <value>pierre.fernique@astro.unistra.fr</value>
+    </metadata>
+    <metadata>
+        <key>author.name</key>
+        <value>Pierre Fernique, Thomas Boch</value>
+    </metadata>
+    <metadata>
+        <key>home.page</key>
+        <value>http://aladin.u-strasbg.fr/</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>coord.get.sky</subscription>
+    <subscription>coord.pointAt.sky</subscription>
+    <subscription>image.load.fits</subscription>
+    <subscription>script.aladin.send</subscription>
+    <subscription>snapshot.get.jpg</subscription>
+    <subscription>table.highlight.row</subscription>
+    <subscription>table.load.fits</subscription>
+    <subscription>table.load.votable</subscription>
+    <subscription>table.select.rowList</subscription>
+</SampStub>

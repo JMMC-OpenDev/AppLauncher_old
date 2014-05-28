@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="topcat">
+    <metadata>
+        <key>samp.name</key>
+        <value>topcat</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Tool for OPerations on Catalogues And Tables</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://www.star.bris.ac.uk/~mbt/topcat/images/tc_sok.gif</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://127.0.0.1:2525/doc/sun253/index.html</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://www.star.bris.ac.uk/~mbt/topcat/topcat-full.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>author.affiliation</key>
+        <value>Astrophysics Group, Bristol University</value>
+    </metadata>
+    <metadata>
+        <key>author.email</key>
+        <value>m.b.taylor@bristol.ac.uk</value>
+    </metadata>
+    <metadata>
+        <key>author.name</key>
+        <value>Mark Taylor</value>
+    </metadata>
+    <metadata>
+        <key>home.page</key>
+        <value>http://www.starlink.ac.uk/topcat/</value>
+    </metadata>
+    <metadata>
+        <key>topcat.version</key>
+        <value>4.1</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>coord.pointAt.sky</subscription>
+    <subscription>table.get.stil</subscription>
+    <subscription>table.highlight.row</subscription>
+    <subscription>table.load.cdf</subscription>
+    <subscription>table.load.fits</subscription>
+    <subscription>table.load.stil</subscription>
+    <subscription>table.load.votable</subscription>
+    <subscription>table.select.rowList</subscription>
+    <subscription>voresource.loadlist</subscription>
+    <subscription>voresource.loadlist.cone</subscription>
+    <subscription>voresource.loadlist.siap</subscription>
+    <subscription>voresource.loadlist.ssap</subscription>
+    <subscription>voresource.loadlist.tap</subscription>
+</SampStub>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="AMDA" type="WEB">
+    <metadata>
+        <key>samp.name</key>
+        <value>AMDA</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>AMDA (Automated Multi Dataset Analysis) : A generic Webtool for Space Physics data</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.webapp.url</key>
+        <value>http://amda.cdpp.eu/</value>
+    </metadata>
+    <metadata>
+        <key>author.affiliation</key>
+        <value>CDPP, Centre de Données de Physique des Plasmas</value>
+    </metadata>
+    <metadata>
+        <key>author.email</key>
+        <value>amda@irap.omp.eu</value>
+    </metadata>
+    <metadata>
+        <key>home.page</key>
+        <value>http://amda.cdpp.eu/</value>
+    </metadata>
+    <!-- TODO add list of capabilities -->
+</SampStub>

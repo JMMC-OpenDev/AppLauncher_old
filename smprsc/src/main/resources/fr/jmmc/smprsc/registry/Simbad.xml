@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="Simbad" type="WEB">
+    <metadata>
+        <key>samp.name</key>
+        <value>Simbad</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>CDS Simbad database querying system</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.webapp.url</key>
+        <value>http://simbad.u-strasbg.fr/simbad/</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://simbad.u-strasbg.fr/guide/index.htx</value>
+    </metadata>
+    <metadata>
+        <key>author.affiliation</key>
+        <value>CDS, Observatoire astronomique de Strasbourg</value>
+    </metadata>
+    <metadata>
+        <key>author.email</key>
+        <value>question@simbad.u-strasbg.fr</value>
+    </metadata>
+    <metadata>
+        <key>home.page</key>
+        <value>http://simbad.u-strasbg.fr/</value>
+    </metadata>
+</SampStub>

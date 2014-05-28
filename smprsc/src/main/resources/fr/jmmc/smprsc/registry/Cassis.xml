@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="Cassis">
+    <metadata>
+        <key>samp.name</key>
+        <value>Cassis</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Cassis is a spectrum visualizer, analysis and modeling tool.</value>
+    </metadata>
+    <metadata>
+        <key>email</key>
+        <value>cassis-dev@irap.omp.eu</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://cassis.irap.omp.eu/online/cassis.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.homepage.url</key>
+        <value>http://cassis.irap.omp.eu</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://cassis.irap.omp.eu/online/files/ressource/logo_cassis.gif</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://cassis.irap.omp.eu/help/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.authors</key>
+        <value>CNRS IRAP</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>spectrum.load.ssa-generic</subscription>
+    <subscription>table.load.fits</subscription>
+    <subscription>table.load.votable</subscription>
+</SampStub>

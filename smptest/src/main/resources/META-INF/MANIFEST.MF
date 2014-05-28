@@ -1,0 +1,10 @@
+Built-By: JMMC (jmmc-tech-group@ujf-grenoble.fr)
+Built-Date: ${timestamp}
+Implementation-Title: AppLauncherTester
+Implementation-Version: ${project.version}
+Implementation-Vendor: www.jmmc.fr
+Implementation-URL: http://www.jmmc.fr/applauncher
+Application-Name: AppLauncherTester
+Permissions: all-permissions
+Codebase: http://apps.jmmc.fr
+Main-Class: fr.jmmc.smptest.AppLauncherTester

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="AppLauncherTester">
+    <metadata>
+        <key>samp.name</key>
+        <value>AppLauncherTester</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.name</key>
+        <value>JMMC (Jean-Marie Mariotti Center)</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.url</key>
+        <value>http://www.jmmc.fr/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.homepage.url</key>
+        <value>http://www.jmmc.fr/AppLauncher/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.date</key>
+        <value>31/03/2014</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.version</key>
+        <value>1.0.1</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>fr.jmmc.applaunchertester.try.launch</subscription>
+</SampStub>

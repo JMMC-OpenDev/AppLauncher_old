@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="LITpro">
+    <metadata>
+        <key>samp.name</key>
+        <value>LITpro</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Model fitting software for astronomical optical interferometry data</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.name</key>
+        <value>JMMC (Jean-Marie Mariotti Center)</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.url</key>
+        <value>http://www.jmmc.fr/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.authors</key>
+        <value>Brought to you by CRAL, IPAG and FIZEAU laboratories, and the JMMC Technical Group</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.homepage.url</key>
+        <value>http://www.jmmc.fr/litpro</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://apps.jmmc.fr/~swmgr/LITpro/LITpro.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.beta.url</key>
+        <value>http://apps.jmmc.fr/~betaswmgr/LITpro/LITpro.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.date</key>
+        <value>21/02/2013</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.version</key>
+        <value>1.0.13</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.releasenotes.url</key>
+        <value>http://www.jmmc.fr/litpro/releasenotes.htm</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.rss.url</key>
+        <value>http://www.jmmc.fr/litpro/litpro.rss</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>fr.jmmc.litpro.start.setting</subscription>
+    <subscription>table.load.fits</subscription>
+</SampStub>

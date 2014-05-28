@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+*            AppLauncher project ( http://www.jmmc.fr/applauncher )
+********************************************************************************
+* Copyright (c) 2014, CNRS. All rights reserved.
+*
+* This file is part of AppLauncher.
+*
+* AppLauncher is free software: you can redistribute it and/or modify it under
+* the terms of the GNU General Public License as published by the
+* Free Software Foundation, version 3.
+*
+* AppLauncher is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+* or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+* more details.
+*
+* You should have received a copy of the GNU General Public License along with
+* AppLauncher. If not, see <http://www.gnu.org/licenses/>.
+********************************************************************************
+-->
+<ApplicationData link="http://www.jmmc.fr/AppLauncher/"
+                 faqlink="http://www.jmmc.fr/AppLauncher/faq"
+                 rsslink="http://trac.jmmc.fr/jmmc-applauncher/timeline?format=rss">
+
+    <company>
+        <short_name>JMMC</short_name>
+        <legal_name>Jean-Marie Mariotti Center</legal_name>
+        <logo_resource>fr/jmmc/jmcs/resource/image/jmmc_logo.png</logo_resource>
+        <homepage_url>http://www.jmmc.fr/</homepage_url>
+        <feedback_form_url>http://jmmc.fr/feedback/smprun.php</feedback_form_url>
+    </company>
+
+    <program name="AppLauncherConfig" version="2014.0414"/>
+    <compilation date="21/03/2014" compiler="JDK 1.6.0_24"/>
+
+    <text>AppLauncher Configuration Module to describe all JMMC applications and VO compliant tools.</text>
+    <authors>the JMMC Technical Group</authors>
+
+    <releasenotes>
+        <!--
+        <release version="2014.XXXX">
+            <prerelease version="2014.XXXX beta 1">
+                <change type="CHANGE">Update splat logo.</change>
+            </prerelease>
+        </release>
+        -->
+        <release version="2014.0414">
+            <pubDate>Mon, 14 Apr 2014 12:00:00 GMT</pubDate>
+            <prerelease version="2014.0414 beta 1">
+                <change type="CHANGE">Updated all descriptions.</change>
+            </prerelease>
+        </release>
+        <release version="2014.0321">
+            <pubDate>Fri, 21 Mar 2014 12:00:00 GMT</pubDate>
+            <prerelease version="2014.0321 beta 1">
+                <change type="FEATURE">Added Cassis and seleste applications.</change>
+            </prerelease>
+        </release>
+        <release version="2014.0204">
+            <pubDate>Tue, 04 Feb 2014 12:00:00 GMT</pubDate>
+            <prerelease version="2014.0204 beta 1">
+                <change type="FEATURE">Initial configuration extracted from AppLauncher package.</change>
+            </prerelease>
+        </release>
+    </releasenotes>
+
+    <acknowledgment><![CDATA[This research has made use of the Jean-Marie Mariotti Center \texttt{AppLauncher} application \footnote{Available at http://www.jmmc.fr/applauncher}
+developped by IPAG, heavily based on \texttt{jSAMP} from Mark TAYLOR \footnote{Available at http://software.astrogrid.org/doc/p/jsamp/1.3-2/}.]]>
+    </acknowledgment>
+
+</ApplicationData>

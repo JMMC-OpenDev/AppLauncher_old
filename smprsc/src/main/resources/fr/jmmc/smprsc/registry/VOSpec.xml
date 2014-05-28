@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="VOSpec">
+    <metadata>
+        <key>email</key>
+        <value>sat_vo@sciops.esa.int</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://esavo.esac.esa.int/webstart/VOSpec.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>samp.name</key>
+        <value>VOSpec</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>ESA-VO Spectral Analysis Tool</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://esavo.esac.esa.int/VOSpecManual/Images/index2_25.gif</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://www.sciops.esa.int/index.php?project=ESAVO&amp;page=vospec</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>spectrum.load.ssa-generic</subscription>
+    <subscription>table.highlight.row</subscription>
+    <subscription>table.load.fits</subscription>
+    <subscription>table.load.votable</subscription>
+    <subscription>table.select.rowlist</subscription>
+</SampStub>

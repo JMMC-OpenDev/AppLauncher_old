@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="splat">
+    <metadata>
+        <key>email</key>
+        <value>p.w.draper@durham.ac.uk</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://astro.dur.ac.uk/~pdraper/starjava/splat.jnlp</value>
+    </metadata>
+    <metadata>
+        <key>samp.name</key>
+        <value>splat</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Starlink SPLAT-VO: A Spectral Analysis Tool</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://astro.dur.ac.uk/~pdraper/starjava/starlink_logo_med.gif</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://www.starlink.ac.uk/splat</value>
+    </metadata>
+    <metadata>
+        <key>authors</key>
+        <value>Peter W. Draper, Mark B. Taylor &amp; Margarida Castro Neves</value>
+    </metadata>
+    <metadata>
+        <key>copyright</key>
+        <value>Copyright (C) 2001-2005 Central Laboratory of the Research Councils
+            Copyright (C) 2006-2008 Particle Physics and Astronomy Research Council
+            Copyright (C) 2008-2009 Science and Technology Facilities Council
+            Supported by the Joint Astronomy Centre Hawaii
+            Copyright (C) 2010-2013 Peter W. Draper
+            Copyright (C) 2013 German Astrophysical Virtual Observatory (GAVO)</value>
+    </metadata>
+    <metadata>
+        <key>splat.version</key>
+        <value>3.10-0</value>
+    </metadata>
+    <metadata>
+        <key>support.mail</key>
+        <value>starlink@jiscmail.ac.uk</value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>spectrum.load.ssa-generic</subscription>
+    <subscription>table.load.fits</subscription>
+    <subscription>table.load.votable</subscription>
+</SampStub>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStubList>
+    <!-- Categorized and alphabetically ordered application list -->
+    <family category="Interferometry">
+        <application>Aspro2</application>
+        <application>LITpro</application>
+        <application>OIFitsExplorer</application>
+        <application>SearchCal</application>
+    </family>
+    <family category="Essentials">
+        <application>AppLauncherTester</application>
+        <application>Aladin</application>
+        <application>splat</application>
+        <application>topcat</application>
+        <application>seleste</application>        
+        <application>VOPlot</application>        
+        <application>Cassis</application>
+        <application>VOSpec</application>
+        <application>gaia</application>
+        <application>SAOImage_DS9</application>
+        <application>Iris</application>
+    </family>
+    <family category="WebApps">
+        <application>AMDA</application>
+        <application>Simbad</application>
+        <application>VizieR</application>
+        <application>VOSED</application>
+    </family>
+</SampStubList>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="Iris" type="CLI">
+    <metadata>
+        <key>samp.name</key>
+        <value>Iris</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Iris is a tool which allows the astronomer to build a SED of a source from multiple, separate data segments or photometric points, gathered from various observatories across a wide spectral range, and fit the aggregate SED with emission and/or absorption spectral models; individual data segments may also be separately analyzed. SED data may be uploaded into the application from IVOA-compliant VOTable and FITS format files, or imported directly from the NASA Extragalactic Database; data written in non-native formats may be converted using the SED Builder portion of the tool. Iris can save SED data files in one of the aforementioned supported file formats, as well as files for restoring custom fitting sessions.</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://cxc.harvard.edu/iris/v2.0/imgs/iris_logo_small_blue_cropped.jpg</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://cxc.harvard.edu/iris/v2.0/guide.html</value>
+    </metadata>
+
+    <metadata>
+        <key>x-samp.authors</key>
+        <value>Omar Laurino (SAO), Ivo Busko (STScI), Janet Evans (SAO), Nina Bonaventura (SAO), Jamie Budynkiewicz (SAO), Mark Cresitello-Dittmar (SAO), Raffaele D'Abrusco (SAO), Stephen Doe (SAO), Rick Ebert (IPAC), Joseph Miller (SAO), Olga Pevunova (IPAC) Brian Refsdal (SAO).</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.faq.url</key>
+        <value>http://cxc.cfa.harvard.edu/iris/v2.0/faq/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.homepage.url</key>
+        <value>http://cxc.harvard.edu/iris/v2.0/index.html</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.date</key>
+        <value>14/06/2013</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.version</key>
+        <value>2.0</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.releasenotes.url</key>
+        <value>http://cxc.harvard.edu/iris/v2.0/releasenotes/index.html</value>
+    </metadata>
+    <!--
+        <metadata>
+            <key>x-samp.rss.url</key>
+            <value></value>
+        </metadata>
+    -->
+    <metadata>
+        <key>affiliation.name</key>
+        <value>VAO (US Virtual Astronomical Observatory)</value>
+    </metadata>
+    <metadata>
+        <key>affiliation.support</key>
+        <value>http://www.usvao.org/contact-connect/</value>
+    </metadata>
+    <metadata>
+        <key>affiliation.url</key>
+        <value>http://www.usvao.org/</value>
+    </metadata>
+
+    <metadata>
+        <key>x-samp.cli.path</key>
+        <value></value>
+    </metadata>
+
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.disconnect</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>spectrum.load.ssa-generic</subscription>
+    <subscription>table.load.fits</subscription>
+    <subscription>table.load.votable</subscription>
+</SampStub>

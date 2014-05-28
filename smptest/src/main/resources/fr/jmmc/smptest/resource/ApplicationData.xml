@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+*            AppLauncher project ( http://www.jmmc.fr/applauncher )
+********************************************************************************
+* Copyright (c) 2014, CNRS. All rights reserved.
+*
+* This file is part of AppLauncher.
+*
+* AppLauncher is free software: you can redistribute it and/or modify it under
+* the terms of the GNU General Public License as published by the
+* Free Software Foundation, version 3.
+*
+* AppLauncher is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+* or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+* more details.
+*
+* You should have received a copy of the GNU General Public License along with
+* AppLauncher. If not, see <http://www.gnu.org/licenses/>.
+********************************************************************************
+-->
+<ApplicationData link="http://www.jmmc.fr/AppLauncher/">
+
+    <company>
+        <short_name>JMMC</short_name>
+        <legal_name>Jean-Marie Mariotti Center</legal_name>
+        <logo_resource>/fr/jmmc/jmcs/resource/image/jmmc_logo.png</logo_resource>
+        <homepage_url>http://www.jmmc.fr/</homepage_url>
+        <feedback_form_url>http://jmmc.fr/feedback/smprun.php</feedback_form_url>
+    </company>
+    
+    <program name="AppLauncherTester" version="1.0.1"/>
+
+    <compilation date="31/03/2014" compiler="JDK 1.5.0_16"/>
+
+    <text>Minimal SAMP application to test AppLauncher JNLP starting ability</text>
+
+    <dependences>
+    </dependences>
+  
+    <menubar>
+    </menubar>
+  
+    <releasenotes>
+        <release version="1.0.1">
+            <prerelease version="1.0.1b1" tag="AT_V1_0_1b1">
+                <change type="BUGFIX">Fixed misleading cleanup exception on manual exit.</change>
+            </prerelease>          
+        </release>
+        <release version="1.0">
+            <prerelease version="1.0d1" tag="AT_V1_0d1">
+                <change type="FEATURE">First release.</change>
+            </prerelease>          
+        </release>
+    </releasenotes>
+  
+    <acknowledgment><![CDATA[This research has made use of the Jean-Marie Mariotti Center \texttt{AppLauncher} application \footnote{Available at http://www.jmmc.fr/applauncher}
+developped by IPAG, heavily based on \texttt{jSAMP} from Mark TAYLOR \footnote{Available at http://software.astrogrid.org/doc/p/jsamp/1.3-2/}.]]>
+    </acknowledgment>
+</ApplicationData>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="gaia" type="CLI">
+    <metadata>
+        <key>samp.name</key>
+        <value>gaia</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Graphical Astronomy and Image Analysis tool</value>
+    </metadata>
+    <metadata>
+        <key>samp.icon.url</key>
+        <value>http://astro.dur.ac.uk/~pdraper/gaia/gaiaicon.gif</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://astro.dur.ac.uk/~pdraper/gaia/gaia.html</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.cli.path</key>
+        <value></value>
+    </metadata>
+    <subscription>samp.app.ping</subscription>
+    <subscription>samp.hub.event.metadata</subscription>
+    <subscription>samp.hub.event.register</subscription>
+    <subscription>samp.hub.event.shutdown</subscription>
+    <subscription>samp.hub.event.subscriptions</subscription>
+    <subscription>samp.hub.event.unregister</subscription>
+    <subscription>client.env.get</subscription>
+    <subscription>coord.pointAt.sky</subscription>
+    <subscription>image.load.fits</subscription>
+    <subscription>table.highlight.row</subscription>
+    <subscription>table.load.votable</subscription>
+    <subscription>table.select.rowList</subscription>
+</SampStub>

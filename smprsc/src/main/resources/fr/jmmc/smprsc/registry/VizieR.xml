@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="VizieR" type="WEB">
+    <metadata>
+        <key>samp.name</key>
+        <value>VizieR</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>CDS VizieR catalogs querying system</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.webapp.url</key>
+        <value>http://vizier.u-strasbg.fr/viz-bin/VizieR</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://vizier.u-strasbg.fr/vizier//index.htx#desc</value>
+    </metadata>
+    <metadata>
+        <key>author.affiliation</key>
+        <value>CDS, Observatoire astronomique de Strasbourg</value>
+    </metadata>
+    <metadata>
+        <key>author.email</key>
+        <value>question@simbad.u-strasbg.fr</value>
+    </metadata>
+    <metadata>
+        <key>home.page</key>
+        <value>http://vizier.u-strasbg.fr/</value>
+    </metadata>
+</SampStub>
