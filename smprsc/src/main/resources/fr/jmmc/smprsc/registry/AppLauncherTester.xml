@@ -17,6 +17,10 @@
         <value>http://www.jmmc.fr/AppLauncher/</value>
     </metadata>
     <metadata>
+        <key>x-samp.jnlp.url</key>
+        <value>http://apps.jmmc.fr/~smprun/AppLauncherTester/AppLauncherTester.jnlp</value>
+    </metadata>
+    <metadata>
         <key>x-samp.release.date</key>
         <value>31/03/2014</value>
     </metadata>

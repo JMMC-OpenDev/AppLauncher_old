@@ -32,8 +32,8 @@
         <feedback_form_url>http://jmmc.fr/feedback/smprun.php</feedback_form_url>
     </company>
 
-    <program name="AppLauncherConfig" version="2014.0414"/>
-    <compilation date="21/03/2014" compiler="JDK 1.6.0_24"/>
+    <program name="AppLauncherConfig" version="2014.0725"/>
+    <compilation date="25/07/2014" compiler="JDK 1.6.0_24"/>
 
     <text>AppLauncher Configuration Module to describe all JMMC applications and VO compliant tools.</text>
     <authors>the JMMC Technical Group</authors>
@@ -46,6 +46,12 @@
             </prerelease>
         </release>
         -->
+        <release version="2014.0725">
+            <pubDate>Fri, 25 Jul 2014 12:00:00 GMT</pubDate>
+            <prerelease>
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/58">Added back AppLauncherTester JNLP URL.</change>
+            </prerelease>
+        </release>
         <release version="2014.0414">
             <pubDate>Mon, 14 Apr 2014 12:00:00 GMT</pubDate>
             <prerelease version="2014.0414 beta 1">
