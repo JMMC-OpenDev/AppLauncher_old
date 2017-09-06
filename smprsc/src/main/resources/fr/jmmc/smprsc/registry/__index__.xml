@@ -6,15 +6,17 @@
         <application>LITpro</application>
         <application>OIFitsExplorer</application>
         <application>SearchCal</application>
+        <application>OImaging</application>
+
     </family>
     <family category="Essentials">
         <application>AppLauncherTester</application>
         <application>Aladin</application>
-        <application>splat</application>
         <application>topcat</application>
-        <application>seleste</application>        
-        <application>VOPlot</application>        
         <application>Cassis</application>
+        <application>ETC-42</application>
+        <application>seleste</application>
+        <application>splat</application>
         <application>VOSpec</application>
         <application>gaia</application>
         <application>SAOImage_DS9</application>
@@ -22,6 +24,7 @@
     </family>
     <family category="WebApps">
         <application>AMDA</application>
+        <application>OiDB</application>
         <application>Simbad</application>
         <application>VizieR</application>
         <application>VOSED</application>

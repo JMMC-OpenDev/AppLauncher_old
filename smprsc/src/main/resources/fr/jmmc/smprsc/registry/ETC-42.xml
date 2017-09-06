@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<SampStub uid="LITpro">
+<SampStub uid="ETC-42">
     <metadata>
         <key>samp.name</key>
-        <value>LITpro</value>
+        <value>ETC-42</value>
     </metadata>
     <metadata>
         <key>samp.description.text</key>
-        <value>Model fitting software for astronomical optical interferometry data</value>
+        <value>Exposure Time Calculator - 42</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>https://projets.lam.fr/projects/etc/documents</value>
     </metadata>
     <metadata>
         <key>x-samp.affiliation.name</key>
-        <value>JMMC (Jean-Marie Mariotti Center)</value>
+        <value>LAM CeSAM (Laboratoire d'Astrophysique de Marseille Centre de Données Astrophysiques de Marseille)</value>
     </metadata>
     <metadata>
         <key>x-samp.affiliation.url</key>
-        <value>http://www.jmmc.fr/</value>
+        <value>http://www.lam.fr/cesam</value>
     </metadata>
     <metadata>
         <key>x-samp.authors</key>
-        <value>Brought to you by CRAL, IPAG and LAGRANGE laboratories, and the JMMC Technical Group</value>
+        <value>Brought to you by the CeSAM department of LAM</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.faq.url</key>
+        <value>https://projets.lam.fr/projects/etc/wiki/FAQ</value>
     </metadata>
     <metadata>
         <key>x-samp.homepage.url</key>
-        <value>http://www.jmmc.fr/litpro</value>
+        <value>https://projets.lam.fr/projects/etc</value>
     </metadata>
     <metadata>
         <key>x-samp.jnlp.url</key>
-        <value>http://www.jmmc.fr/apps/public/LITpro/LITpro.jnlp</value>
-    </metadata>
-    <metadata>
-        <key>x-samp.jnlp.beta.url</key>
-        <value>http://www.jmmc.fr/apps/beta/LITpro/LITpro.jnlp</value>
-    </metadata>
-    <metadata>
-        <key>x-samp.release.date</key>
-        <value>27/10/2015</value>
-    </metadata>
-    <metadata>
-        <key>x-samp.release.version</key>
-        <value>1.0.16</value>
+        <value>http://cesam.lam.fr/Apps/ETC/webstart/launch.jnlp</value>
     </metadata>
     <metadata>
         <key>x-samp.releasenotes.url</key>
-        <value>http://www.jmmc.fr/litpro/releasenotes.htm</value>
+        <value>https://gitlab.lam.fr/etc42/ETC42/tags/</value>
     </metadata>
     <metadata>
-        <key>x-samp.rss.url</key>
-        <value>http://www.jmmc.fr/litpro/litpro.rss</value>
+        <key>x-samp.release.date</key>
+        <value>15/05/2017</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.version</key>
+        <value>1.0.0.3</value>
     </metadata>
     <subscription>samp.app.ping</subscription>
     <subscription>samp.hub.disconnect</subscription>
@@ -56,7 +56,5 @@
     <subscription>samp.hub.event.subscriptions</subscription>
     <subscription>samp.hub.event.unregister</subscription>
     <subscription>client.env.get</subscription>
-    <subscription>fr.jmmc.litpro.load.usermodel</subscription>
-    <subscription>fr.jmmc.litpro.start.setting</subscription>
-    <subscription>table.load.fits</subscription>
+    <subscription>spectrum.load.ssa-generic</subscription>
 </SampStub>

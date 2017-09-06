@@ -29,7 +29,7 @@
         <legal_name>Jean-Marie Mariotti Center</legal_name>
         <logo_resource>fr/jmmc/jmcs/resource/image/jmmc_logo.png</logo_resource>
         <homepage_url>http://www.jmmc.fr/</homepage_url>
-        <feedback_form_url>http://jmmc.fr/feedback/smprun.php</feedback_form_url>
+        <feedback_form_url>http://jmmc.fr/feedback/feedback.php</feedback_form_url>
     </company>
 
     <program name="AppLauncherConfig" version="2014.0725"/>

@@ -22,11 +22,11 @@
     </metadata>
     <metadata>
         <key>x-samp.jnlp.url</key>
-        <value>http://apps.jmmc.fr/~swmgr/OIFitsExplorer/OIFitsExplorer.jnlp</value>
+        <value>http://www.jmmc.fr/apps/public/OIFitsExplorer/OIFitsExplorer.jnlp</value>
     </metadata>
     <metadata>
         <key>x-samp.jnlp.beta.url</key>
-        <value>http://apps.jmmc.fr/~betaswmgr/OIFitsExplorer/OIFitsExplorer.jnlp</value>
+        <value>http://www.jmmc.fr/apps/beta/OIFitsExplorer/OIFitsExplorer.jnlp</value>
     </metadata>
     <metadata>
         <key>x-samp.homepage.url</key>
@@ -34,11 +34,11 @@
     </metadata>
     <metadata>
         <key>x-samp.release.date</key>
-        <value>06/09/2013</value>
+        <value>21/11/2016</value>
     </metadata>
     <metadata>
         <key>x-samp.release.version</key>
-        <value>0.1.4</value>
+        <value>0.2.1 beta 5</value>
     </metadata>
     <subscription>samp.app.ping</subscription>
     <subscription>samp.hub.disconnect</subscription>

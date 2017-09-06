@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SampStub uid="OiDB" type="WEB">
+    <metadata>
+        <key>samp.name</key>
+        <value>OiDB</value>
+    </metadata>
+    <metadata>
+        <key>samp.description.text</key>
+        <value>Optical interferometry DataBase</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://oidb.jmmc.fr/doc.html</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.name</key>
+        <value>JMMC (Jean-Marie Mariotti Center)</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.affiliation.url</key>
+        <value>http://www.jmmc.fr/</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.authors</key>
+        <value>Brought to you by the JMMC Technical Group</value>
+    </metadata>
+    <metadata>
+        <key>homepage.url</key>
+        <value>http://oidb.jmmc.fr</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.date</key>
+        <value>22/06/2015</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.release.version</key>
+        <value>1.0</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.releasenotes.url</key>
+        <value>http://oidb.jmmc.fr/about.html</value>
+    </metadata>
+    <metadata>
+        <key>x-samp.rss.url</key>
+        <value>http://oidb.jmmc.fr/rss</value>
+    </metadata>
+
+    <metadata>
+        <key>x-samp.webapp.url</key>
+        <value>http://oidb.jmmc.fr</value>
+    </metadata>
+    <metadata>
+        <key>samp.documentation.url</key>
+        <value>http://oidb.jmmc.fr/doc.html</value>
+    </metadata>
+</SampStub>
