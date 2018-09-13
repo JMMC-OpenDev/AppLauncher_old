@@ -20,7 +20,7 @@
 * AppLauncher. If not, see <http://www.gnu.org/licenses/>.
 ********************************************************************************
 -->
-<jnlp spec="1.0+" codebase="@GENERATED@" href="AppLauncherTester.jnlp">
+<jnlp spec="6.0+" codebase="@GENERATED@" href="AppLauncherTester.jnlp">
     <information>
         <title>AppLauncherTester</title>
         <vendor>JMMC (Jean-Marie MARIOTTI Center)</vendor>
@@ -32,13 +32,14 @@
     <security>
         <all-permissions/>
     </security>
+    <update check="background" policy="always"/>
     <resources>
-        <j2se version="1.6+" initial-heap-size="64m" max-heap-size="128m"/>
+        <j2se version="1.7+" initial-heap-size="64m" max-heap-size="128m"/>
 
         <!-- MANUALLY EDITED - Should be generated with maven ASAP ! -->
 
         <!-- Application module first (main class) -->
-        <jar href="jar/smptest-TRUNK.jar" />
+        <jar href="jar/smptest-TRUNK.jar" main="true"/>
 
 
         <!-- JMMC modules -->

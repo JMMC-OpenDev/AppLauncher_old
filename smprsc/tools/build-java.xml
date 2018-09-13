@@ -29,39 +29,31 @@ Description: ANT script.
 
 <project name="AppLauncherRsc" default="about" basedir=".">
 
-    <description>AppLauncherRsc ANT build file</description>
+    <description>
+        Ant build file, mainly dedicated to generate code from xsd using jaxb.
+    </description>
 
+
+    <!--
+        Get build properties (general).
+        Should only contain the location of the JMCS module where JAXB libraries can be found.
+    -->
+    <property file="build.properties" />
+
+    <!-- NOTE: jmcs is supposed to be in the parent folder -->
+    <include file="${jmcs.path}/tools/build-include.xml"/>
+
+
+    <!-- define folder properties -->
     <property name="root" location=".."/>
-    <property name="smprsc" location="${root}/../smprsc"/>
-    <property name="libs" location="${smprsc}/lib"/>
-    <property name="sources" location="${root}/src"/>
-  
-    <!-- custom macro to enhance XJC -->
-    <macrodef name="xjc">
-        <attribute name="destdir"/>
-        <attribute name="schema"/>
 
-        <sequential>
-            <java jar="${libs}/jaxb-xjc.jar" fork="true" failonerror="true">
-                <arg value="-classpath"/>
-                <arg value="${libs}/simple-regenerator-1.0.jar"/>
-                <arg value="-no-header"/>
-                <arg value="-extension"/>
-                <!-- preserve code extension -->
-                <arg value="-simple-preserve"/>
-                <arg value="-d"/>
-                <arg value="@{destdir}"/>
-                <arg value="@{schema}"/>
-            </java>
+    <!-- Maven folders -->
+    <property name="sources"   location="${root}/src/main/java"/>
 
-            <!-- remove backup files -->
-            <delete includeemptydirs="false">
-                <fileset dir="@{destdir}">
-                    <include name="**/*.java.backup"/>
-                </fileset>
-            </delete>
-        </sequential>
-    </macrodef>
+
+
+
+    <!-- targets -->
 
     <!-- target about : -->
     <target name="about" description="show information for public targets">
@@ -71,24 +63,24 @@ Description: ANT script.
         <echo>-------------------------------------------------------------------------------</echo>
     </target>
 
-    <target name="checkAppLauncherRsc">
-        <echo>-------------------------------------------------------------------------------</echo>
-        <echo>    AppLauncherRsc Path: ${smprsc}</echo>
-        <echo>-------------------------------------------------------------------------------</echo>
-        <!-- check smprsc path -->
-        <available property="smprsc.check" file="${smprsc}/src/smprsc.doc" />
-        <fail unless="smprsc.check" message="smprsc project does not exist in ${smprsc} !" />
-    </target>
 
-    <target name="genListXsdCode" depends="checkAppLauncherRsc" description="Generates the Java code from List XML schemas (XSD).">
+    <target name="genXsdCode" depends="genListXsdCode, genStubXsdCode" description="generate java classes from XSD schemas" />
+
+
+    <target name="genListXsdCode" description="Generates the Java code from List XML schemas (XSD).">
         <echo>Generating Java code for SampStubList.xsd</echo>
+
         <mkdir dir="${sources}/fr/jmmc/smprsc/data/list/model" />
-        <xjc destdir="${sources}" schema="${sources}/fr/jmmc/smprsc/data/list/SampStubList.xsd"/>
+        <xjc destdir="${sources}"
+             schema="${sources}/fr/jmmc/smprsc/data/list/SampStubList.xsd"/>
     </target>
 
-    <target name="genStubXsdCode" depends="checkAppLauncherRsc" description="Generates the Java code from Stub XML schemas (XSD).">
+
+    <target name="genStubXsdCode" description="Generates the Java code from Stub XML schemas (XSD).">
         <echo>Generating Java code for SampStubDescriptor.xsd</echo>
+
         <mkdir dir="${sources}/fr/jmmc/smprsc/data/stub/model" />
-        <xjc destdir="${sources}" schema="${sources}/fr/jmmc/smprsc/data/stub/SampStubDescriptor.xsd"/>
+        <xjc destdir="${sources}"
+             schema="${sources}/fr/jmmc/smprsc/data/stub/SampStubDescriptor.xsd"/>
     </target>
 </project>

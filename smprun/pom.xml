@@ -57,13 +57,39 @@
             <version>TRUNK</version>
         </dependency>
 
-        <!-- TODO !!!
-                <dependency>
-                    <groupId>fr.jmmc.smprun-doc</groupId>
-                    <artifactId>smprun-doc</artifactId>
-                    <version>1.0.0</version>
-                </dependency>
-        -->
+        <dependency>
+            <groupId>fr.jmmc.smprun-doc</groupId>
+            <artifactId>smprun-doc</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
- 
+
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>smprun-doc</id>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <inherited>false</inherited>
+                        <phase>process-resources</phase> <!-- just before
+compilation -->
+                        <configuration>
+                            <file>lib/JMMC-MAN-2220-0001-doc.jar</file>
+                            <groupId>fr.jmmc.smprun-doc</groupId>
+                            <artifactId>smprun-doc</artifactId>
+                            <version>1.0.0</version>
+                            <packaging>jar</packaging>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>

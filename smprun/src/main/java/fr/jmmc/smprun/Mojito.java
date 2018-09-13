@@ -110,29 +110,31 @@ public class Mojito {
                     for (String id : clientIdsForName) {
                         final Client client = SampManager.getClient(id);
                         final Metadata md = client.getMetadata();
-                        final Subscriptions subscriptions = client.getSubscriptions();
-                        final String clientName = md.getName();
-                        final String applicationId = FileUtils.cleanupFileName(clientName);
+                        if (md != null) {
+                            final Subscriptions subscriptions = client.getSubscriptions();
+                            final String clientName = md.getName();
+                            final String applicationId = FileUtils.cleanupFileName(clientName);
 
-                        final StubMetaData stubMetaData = new StubMetaData(md, subscriptions);
-                        final Object clientIsAStubFlag = md.get(SampMetaData.getStubMetaDataId(clientName));
-                        if (!SampMetaData.STUB_TOKEN.equals(clientIsAStubFlag)) {
+                            final StubMetaData stubMetaData = new StubMetaData(md, subscriptions);
+                            final Object clientIsAStubFlag = md.get(SampMetaData.getStubMetaDataId(clientName));
+                            if (!SampMetaData.STUB_TOKEN.equals(clientIsAStubFlag)) {
 
-                            final String applicationDescription = stubMetaData.getApplicationDescription();
-                            System.out.println("MetaData[" + clientName + "] :");
-                            System.out.println(applicationDescription);
+                                final String applicationDescription = stubMetaData.getApplicationDescription();
+                                System.out.println("MetaData[" + clientName + "] :");
+                                System.out.println(applicationDescription);
 
-                            System.out.println("Saving ...");
-                            final Writer file = FileUtils.openFile(outputDirectory.getAbsolutePath() + "/" + clientName + ".xml");
-                            try {
-                                file.write(applicationDescription);
-                                FileUtils.closeFile(file);
-                            } catch (IOException ex) {
-                                Logger.getLogger(Mojito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                                System.out.println("Saving ...");
+                                final Writer file = FileUtils.openFile(outputDirectory.getAbsolutePath() + "/" + clientName + ".xml");
+                                try {
+                                    file.write(applicationDescription);
+                                    FileUtils.closeFile(file);
+                                } catch (IOException ex) {
+                                    Logger.getLogger(Mojito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                                }
+
+                                retry = -1;
+                                break;
                             }
-
-                            retry = -1;
-                            break;
                         }
                     }
 

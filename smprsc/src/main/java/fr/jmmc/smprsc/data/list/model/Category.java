@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="Category">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Interferometry"/>
- *     &lt;enumeration value="Essentials"/>
- *     &lt;enumeration value="WebApps"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="Category"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Interferometry"/&gt;
+ *     &lt;enumeration value="Essentials"/&gt;
+ *     &lt;enumeration value="WebApps"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -27,7 +27,6 @@ import fr.jmmc.jmcs.util.ImageUtils;
 import fr.jmmc.smprsc.data.list.StubRegistry;
 import fr.jmmc.smprsc.data.list.model.Category;
 import fr.jmmc.smprun.preference.ApplicationListSelectionView;
-import fr.jmmc.smprun.preference.PreferenceKey;
 import fr.jmmc.smprun.preference.Preferences;
 import fr.jmmc.smprun.stub.ClientStub;
 import java.awt.*;
@@ -77,12 +76,8 @@ public class DockWindow extends JFrame implements Observer {
      */
     public static DockWindow getInstance() {
         if (_instance == null) {
-            // Instantiate only if not hidden
-            final boolean shouldShowDockWindow = Preferences.getInstance().getPreferenceAsBoolean(PreferenceKey.SHOW_DOCK_WINDOW);
-            if (shouldShowDockWindow) {
-                _instance = new DockWindow();
-                _instance.init();
-            }
+            _instance = new DockWindow();
+            _instance.init();
         }
         return _instance;
     }

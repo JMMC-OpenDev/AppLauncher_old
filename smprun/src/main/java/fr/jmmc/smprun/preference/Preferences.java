@@ -46,7 +46,9 @@ public class Preferences extends fr.jmmc.jmcs.data.preference.Preferences {
     /**
      * Default selected application list
      */
-    private static final List<String> _defaultSelectedApplicationList = Arrays.asList("Aspro2", "SearchCal", "LITpro", "OIFitsExplorer", "topcat", "Aladin", "Simbad", "VizieR", "splat", "VOPlot", "VOSpec", "VOSED");
+    private static final List<String> _defaultSelectedApplicationList = Arrays.asList("Aspro2", "SearchCal", "LITpro", "OIFitsExplorer", "OImaging",
+            "topcat", "Aladin", "ETC-42", "Cassis", "splat", "VOSpec",
+            "AMDA", "OiDB", "Simbad", "VizieR", "VOSED");
     /**
      * Constant to detect that no application is deselected
      */
@@ -80,8 +82,6 @@ public class Preferences extends fr.jmmc.jmcs.data.preference.Preferences {
     protected void setDefaultPreferences() throws PreferencesException {
         // By default always consider it is the first time ever AppLauncher is started
         setDefaultPreference(PreferenceKey.FIRST_START_FLAG, true);
-        // By default always show dock window on startup
-        setDefaultPreference(PreferenceKey.SHOW_DOCK_WINDOW, true);
         // By default always start all stubs
         setDefaultPreference(PreferenceKey.START_SELECTED_STUBS, false);
         // By default always show exit warning

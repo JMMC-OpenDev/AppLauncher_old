@@ -439,8 +439,12 @@ public class ApplicationListSelectionPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 final boolean betaCheckBoxIsSelected = betaCheckBox.isSelected();
-                _logger.debug("Beta JNLP Checkbox has been '{}' for application '{}', saving state.",
-                        (betaCheckBoxIsSelected ? "selected" : "deselected"), _currentlySelectedApplicationName);
+
+                if (_logger.isDebugEnabled()) {
+                    _logger.debug("Beta JNLP Checkbox has been '{}' for application '{}', saving state.",
+                            (betaCheckBoxIsSelected ? "selected" : "deselected"), _currentlySelectedApplicationName);
+                }
+
                 _cachedBetaCheckBoxStates.put(_currentlySelectedApplicationName, betaCheckBoxIsSelected);
 
                 // Get all desired beta applications
@@ -559,7 +563,9 @@ public class ApplicationListSelectionPanel extends JPanel {
      * Should be override to save selected application list.
      */
     protected void checkedApplicationChanged(List<String> checkedApplicationList) {
-        _logger.debug("Selected applications : {}.", CollectionUtils.toString(checkedApplicationList, ", ", "{", "}"));
+        if (_logger.isDebugEnabled()) {
+            _logger.debug("Selected applications : {}.", CollectionUtils.toString(checkedApplicationList, ", ", "{", "}"));
+        }
     }
 
     /**
@@ -599,7 +605,9 @@ public class ApplicationListSelectionPanel extends JPanel {
      * Should be override to save beta application list.
      */
     protected void betaApplicationChanged(List<String> betaApplicationList) {
-        _logger.debug("Beta applications : {}.", CollectionUtils.toString(betaApplicationList, ", ", "{", "}"));
+        if (_logger.isDebugEnabled()) {
+            _logger.debug("Beta applications : {}.", CollectionUtils.toString(betaApplicationList, ", ", "{", "}"));
+        }
     }
 
     /**

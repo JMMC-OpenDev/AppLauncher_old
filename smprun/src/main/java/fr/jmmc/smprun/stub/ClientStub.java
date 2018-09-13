@@ -29,6 +29,7 @@ import fr.jmmc.jmcs.network.interop.SampMetaData;
 import fr.jmmc.jmcs.service.BrowserLauncher;
 import fr.jmmc.jmcs.service.JnlpStarter;
 import fr.jmmc.jmcs.util.CommandLineUtils;
+import fr.jmmc.jmcs.util.StringUtils;
 import fr.jmmc.jmcs.util.concurrent.ThreadExecutors;
 import fr.jmmc.jmcs.util.runner.JobListener;
 import fr.jmmc.jmcs.util.runner.LocalLauncher;
@@ -124,10 +125,10 @@ public final class ClientStub extends Observable implements JobListener {
 
         _preferences = Preferences.getInstance();
 
-        // Retrieve each serialized SAMP meta data
+        // Retrieve each serialized SAMP meta data (remove accent to be samp compliant)
         _description = new Metadata();
         for (fr.jmmc.smprsc.data.stub.model.Metadata metadata : data.getMetadatas()) {
-            _description.put(metadata.getKey(), metadata.getValue());
+            _description.put(metadata.getKey(), StringUtils.removeAccents(metadata.getValue()));
         }
 
         // Retrieve real application name, JNLP URL and startup delay
@@ -207,7 +208,6 @@ public final class ClientStub extends Observable implements JobListener {
     public ImageIcon getApplicationIcon() {
 
         // @TODO : Use a generic app icon as placeholder when none available... BUT AppLauncherTester is kept invisible because of this...
-
         // Try to load embedded one in smprrsc
         return StubMetaData.getEmbeddedApplicationIcon(_applicationName);
     }
@@ -411,7 +411,6 @@ public final class ClientStub extends Observable implements JobListener {
         synchronized (_lock) {
 
             // Note: when the javaws does not start correctly the application => it will never connect to SAMP; let the user retry ...
-
             switch (_executionType) {
                 case JNLP:
                     final String finalJnlpUrl = getFinalJnlpUrl();
@@ -517,8 +516,8 @@ public final class ClientStub extends Observable implements JobListener {
                 /*
                  * Note: the cancel does not work on unix system:
                  * javaws is the parent command that launches another command java ...
-                 * 
-                 * Process.destroy does not kill sub processes: we could use ps -ef ... | kill 
+                 *
+                 * Process.destroy does not kill sub processes: we could use ps -ef ... | kill
                  * but it tricky again
                  */
 
@@ -679,7 +678,6 @@ public final class ClientStub extends Observable implements JobListener {
 
                         // Once the application will have finish started and been fully registered to the hub,
                         // HubMonitor will detect it and ask the stub to forward any pending message to the real application.
-
                         return null;
                     }
                 };

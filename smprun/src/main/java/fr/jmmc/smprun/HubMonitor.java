@@ -205,40 +205,42 @@ public final class HubMonitor {
         final Collection<ClientStub> clientStubList = HubPopulator.getClientStubMap().values();
         for (ClientStub stub : clientStubList) {
 
-            String stubName = stub.getApplicationName();
+            final String stubName = stub.getApplicationName();
             boolean recipientFound = false;
 
             // Check each registered clients for the sought recipient name
             for (Client client : clients) {
+                final Metadata md = client.getMetadata();
+                
+                if (md != null) {
+                    final String clientName = md.getName();
 
-                Metadata md = client.getMetadata();
-                String clientName = md.getName();
+                    if (clientName.matches(stubName)) {
+                        recipientFound = true;
 
-                if (clientName.matches(stubName)) {
-                    recipientFound = true;
+                        final String recipientId = client.getId();
 
-                    String recipientId = client.getId();
-
-                    // If current client is one of our STUB
-                    Object clientIsAStubFlag = md.get(SampMetaData.getStubMetaDataId(clientName));
-                    if (SampMetaData.STUB_TOKEN.equals(clientIsAStubFlag)) {
-                        _logger.debug("Found STUB recipient '{}' [{}]: leaving it alone.", clientName, recipientId);
-                    } else {
-
-                        if (stub.isConnected()) {
-                            _logger.info("Found REAL recipient '{}' [{}]: running STUB trickery !", clientName, recipientId);
-
-                            // Retrieve real application metadata for sniffing purpose
-                            retrieveRealRecipientMetadata(client);
-
-                            // Perform callback on client stub in background
-                            handleNewRealRecipientDetection(stub, recipientId);
+                        // If current client is one of our STUB
+                        final Object clientIsAStubFlag = md.get(SampMetaData.getStubMetaDataId(clientName));
+                        if (SampMetaData.STUB_TOKEN.equals(clientIsAStubFlag)) {
+                            _logger.debug("Found STUB recipient '{}' [{}]: leaving it alone.", clientName, recipientId);
                         } else {
-                            _logger.info("Found REAL recipient '{}' [{}]: but the STUB is already disconnected.", clientName, recipientId);
-                        }
-                    }
 
-                    // Do not exit from loop as we can have two SAMP clients having the same application name: real and stub for example.
+                            if (stub.isConnected()) {
+                                _logger.info("Found REAL recipient '{}' [{}]: running STUB trickery !", clientName, recipientId);
+
+                                // Retrieve real application metadata for sniffing purpose
+                                retrieveRealRecipientMetadata(client);
+
+                                // Perform callback on client stub in background
+                                handleNewRealRecipientDetection(stub, recipientId);
+                            } else {
+                                _logger.info("Found REAL recipient '{}' [{}]: but the STUB is already disconnected.", clientName, recipientId);
+                            }
+                        }
+
+                        // Do not exit from loop as we can have two SAMP clients having the same application name: real and stub for example.
+                    }
                 }
             }
 
@@ -313,22 +315,24 @@ public final class HubMonitor {
      */
     private void retrieveRealRecipientMetadata(final Client client) {
         final Metadata md = client.getMetadata();
-        final String clientName = md.getName();
+        if (md != null) {
+            final String clientName = md.getName();
 
-        final String applicationId = FileUtils.cleanupFileName(clientName);
+            final String applicationId = FileUtils.cleanupFileName(clientName);
 
-        // If the curent application is not in the registry yet
-        if (!StubRegistry.isApplicationKnown(applicationId)) {
-            _logger.info("Detected an unknown application '{}'.", clientName);
+            // If the curent application is not in the registry yet
+            if (!StubRegistry.isApplicationKnown(applicationId)) {
+                _logger.info("Detected an unknown application '{}'.", clientName);
 
-            // TODO : store previously dismissed apps in preference ?
+                // TODO : store previously dismissed apps in preference ?
 
-            if (!_sniffedRealApplications.containsKey(clientName)) {
-                _logger.info("Sniffed new real application '{}': backed up its metadata and subscriptions.", clientName);
+                if (!_sniffedRealApplications.containsKey(clientName)) {
+                    _logger.info("Sniffed new real application '{}': backed up its metadata and subscriptions.", clientName);
 
-                final StubMetaData stubMetaData = new StubMetaData(md, client.getSubscriptions());
-                _sniffedRealApplications.put(clientName, stubMetaData);
-                stubMetaData.reportToCentralRepository(Preferences.getInstance(), PreferenceKey.SILENTLY_REPORT_FLAG.toString());
+                    final StubMetaData stubMetaData = new StubMetaData(md, client.getSubscriptions());
+                    _sniffedRealApplications.put(clientName, stubMetaData);
+                    stubMetaData.reportToCentralRepository(Preferences.getInstance(), PreferenceKey.SILENTLY_REPORT_FLAG.toString());
+                }
             }
         }
     }

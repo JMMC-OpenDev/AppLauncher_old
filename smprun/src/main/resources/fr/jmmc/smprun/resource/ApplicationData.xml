@@ -20,20 +20,27 @@
 * AppLauncher. If not, see <http://www.gnu.org/licenses/>.
 ********************************************************************************
 -->
-<ApplicationData link="http://www.jmmc.fr/AppLauncher/" faqlink="http://www.jmmc.fr/AppLauncher/faq" rsslink="http://www.jmmc.fr/applauncher/applauncher.rss">
+<ApplicationData link="http://www.jmmc.fr/AppLauncher/" faqlink="https://github.com/JMMC-OpenDev/AppLauncher" rsslink="http://www.jmmc.fr/applauncher/applauncher.rss">
 
     <company>
         <short_name>JMMC</short_name>
         <legal_name>Jean-Marie Mariotti Center</legal_name>
         <logo_resource>fr/jmmc/jmcs/resource/image/jmmc_logo.png</logo_resource>
         <homepage_url>http://www.jmmc.fr/</homepage_url>
-        <feedback_form_url>http://jmmc.fr/feedback/smprun.php</feedback_form_url>
+        <feedback_form_url>http://jmmc.fr/feedback/feedback.php</feedback_form_url>
     </company>
 
-    <program name="AppLauncher" version="1.1.5"/>
-    <compilation date="15/5/2014" compiler="JDK 1.6.0_24"/>
-    <text>AppLauncher is the JMMC SAMP hub extension, that automatically start capable applications 'on demand' and provide a 'Dock' window with all JMMC applications and VO compliant tools.</text>
+    <program name="AppLauncher" version="1.1.8"/>
+    <compilation date="06/03/2018" compiler="JDK 1.6.0_24"/>
+    <text>AppLauncher is the OpenSource SAMP hub extension from JMMC, that automatically starts capable applications 'on demand' and provides a 'Dock' window with all JMMC applications and VO compliant tools.</text>
     <authors>the JMMC Technical Group</authors>
+
+    <distribution>
+        <application_data_file>ApplicationRelease.xml</application_data_file>
+        <public_url>http://www.jmmc.fr/apps/public/AppLauncher/</public_url>
+        <beta_url>http://www.jmmc.fr/apps/beta/AppLauncher/</beta_url>
+        <alpha_url>http://www.jmmc.fr/apps/alpha/AppLauncher/</alpha_url>
+    </distribution>
 
     <dependences>
         <!-- VO interoperability -->
@@ -55,7 +62,38 @@
     </menubar>
 
     <releasenotes>
+        <release version="1.1.8">
+            <pubDate>Tue, 06 Mar 2018 16:00:00 GMT</pubDate>
+            <prerelease version="1.1.8 beta 2">
+                <change type="FEATURE">Improved Java support (9 + mac OS X) but Java 7 minimum is now required</change>
+            </prerelease>
+            <prerelease version="1.1.8 beta 1">
+                <change type="BUGFIX">Avoid a NullPointerException </change><!-- part of JMCS -->
+            </prerelease>
+        </release>
+        <release version="1.1.7">
+            <pubDate>Fri, 04 Aug 2017 09:00:00 GMT</pubDate>
+            <prerelease version="1.1.7b2">
+                <change type="CHANGE" >General application registry update.</change>
+                <change type="CHANGE" >Added ETC-42, OiDB, OImaging applications.</change>
+                <change type="CHANGE" >Cassis, ETC-42, AMDA are now displayed on fresh installations.</change>
+                <change type="BUGFIX">Improve JAVAWS compatibility with non official jdk</change><!-- part of JMCS -->
+            </prerelease>
+            <prerelease version="1.1.7b1">
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-sw/ticket/662">Do not show the feedback report but display the message pane
+                    if a timeout occured while performing JNLP/SAMP auto-test.</change>
+            </prerelease>
+        </release>
+        <release version="1.1.6">
+            <pubDate>Mon, 15 Dec 2014 16:00:00 GMT</pubDate>
+            <prerelease version="1.1.6b1">
+                <change type="CHANGE" url="http://trac.jmmc.fr/jmmc-sw/ticket/652">Removed deprecated preference option to hide main window on startup.</change>
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-sw/ticket/651">Fixed broken Feedback Report backend.</change>
+                <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-sw/ticket/653">Fixed broken user manual menu.</change>
+            </prerelease>
+        </release>
         <release version="1.1.5">
+            <pubDate>Mon, 14 Dec 2014 16:00:00 GMT</pubDate>
             <prerelease version="1.1.5b2">
                 <change type="FEATURE">Added a broadcasted message filter (with its preference) to avoid multiple application startup simultaneously.</change>
                 <change type="CHANGE">Added a menu to view our Registry release notes.</change>
@@ -65,12 +103,14 @@
             </prerelease>
         </release>
         <release version="1.1.4">
+            <pubDate>Mon, 13 Dec 2014 16:00:00 GMT</pubDate>
             <prerelease version="1.1.4b1">
                 <change type="FEATURE">Added SAO IRIS 2.0 application.</change>
                 <change type="BUGFIX" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/51">Fixed redundant confirmation when AppLauncher's window is closed.</change>
             </prerelease>
         </release>
         <release version="1.1.3">
+            <pubDate>Mon, 12 Dec 2014 16:00:00 GMT</pubDate>
             <prerelease version="1.1.3b1">
                 <change type="CHANGE">Minor changes related to frame handling (title, size).</change>
             </prerelease>
@@ -170,7 +210,7 @@
             </prerelease>
             <prerelease version="1.0b2" tag="AL_V1_0b2">
                 <change type="CHANGE">Restructured registry organization.</change>
-                <change type="BUGFIX" >Fixed non-detection of unknown real applications.</change>
+                <change type="BUGFIX">Fixed non-detection of unknown real applications.</change>
             </prerelease>
             <prerelease version="1.0b1" tag="AL_V1_0b1">
                 <change type="FEATURE" url="http://trac.jmmc.fr/jmmc-applauncher/ticket/2">SAMP application meta-data reporting.</change>

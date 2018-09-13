@@ -11,13 +11,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="Type">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="JNLP"/>
- *     &lt;enumeration value="WEB"/>
- *     &lt;enumeration value="CLI"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="Type"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="JNLP"/&gt;
+ *     &lt;enumeration value="WEB"/&gt;
+ *     &lt;enumeration value="CLI"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
