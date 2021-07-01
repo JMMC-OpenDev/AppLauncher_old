@@ -1,3 +1,13 @@
+# Deprecated project
+
+**kept for history, issues & previous releases...**
+
+> Please use projects:
+- https://github.com/JMMC-OpenDev/smprsc
+- https://github.com/JMMC-OpenDev/smprun
+- https://github.com/JMMC-OpenDev/smptest
+
+
 AppLauncher
 ===========
 
